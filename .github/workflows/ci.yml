@@ -1,6 +1,8 @@
 name: CI Test Gate & Automated AI Fix
 
 on:
+  push:
+    branches: [ main, staging ]
   pull_request:
     branches: [ main, staging ]
 
