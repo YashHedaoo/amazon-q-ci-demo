@@ -28,10 +28,7 @@ jobs:
         id: run_tests
         run: npm test
 
-      # 🤖 AUTOMATIC AI FAILURE ANALYSIS & PR FIX
-      # This step triggers AUTOMATICALLY whenever `npm test` fails!
-      - name: Trigger Automated AI Fix Suggestion on PR
-        if: failure()
-        uses: aws-actions/amazon-q-developer-action@v1
-        with:
-          prompt: "Analyze the Jest test failure log, identify the broken file and line number, and post a suggested code fix on this PR."
+      # Note: Amazon Q Developer integrates via the GitHub App (installed from GitHub Marketplace),
+      # not as a GitHub Action step. Once the GitHub App is installed on the repository,
+      # it will automatically analyze PR test failures and post fix suggestions.
+
