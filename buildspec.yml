@@ -1,0 +1,22 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 20
+    commands:
+      - echo "Installing demo dependencies..."
+      - npm ci
+
+  pre_build:
+    commands:
+      - echo "Running TypeScript compilation check..."
+      - npm run build
+      - echo "Running Jest Test Suite (Expected to FAIL to demonstrate Amazon Q AI)..."
+      - npm run test -- --ci --reporters=default --reporters=jest-junit
+
+reports:
+  jest-reports:
+    files:
+      - 'junit.xml'
+    file-format: 'JUNITXML'

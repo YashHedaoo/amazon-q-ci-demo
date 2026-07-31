@@ -1,0 +1,21 @@
+{
+  "name": "amazon-q-ci-demo",
+  "version": "1.0.0",
+  "description": "Standalone demo project for testing Amazon Q AI CI/CD error diagnosis & auto-fix workflow",
+  "main": "dist/discount.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "keywords": ["amazon-q", "ci-cd", "jest", "demo"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.11.24",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2",
+    "typescript": "^5.3.3"
+  }
+}
