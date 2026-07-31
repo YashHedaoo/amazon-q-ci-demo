@@ -8,6 +8,6 @@
 export function calculateDiscount(price: number, discountPercent: number): number {
   if (price <= 0) return 0;
   
-  // Apply percentage-based discount to the original price
+  // ⚠️ INTENTIONAL BUG FOR DEMO TESTING:
   return price * (1 - discountPercent / 100);
 }

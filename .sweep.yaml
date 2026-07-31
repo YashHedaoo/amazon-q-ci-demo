@@ -1,0 +1,17 @@
+# 🧹 Sweep AI Configuration File
+# Documentation: https://docs.sweep.dev
+
+branch: main
+description: "TypeScript Node.js project for testing automated AI CI fixes with Jest"
+
+# Commands run by Sweep in its isolated sandbox to verify code fixes
+sandbox:
+  install:
+    - npm ci
+  test:
+    - npm test
+
+# Custom instructions for Sweep when generating code
+rules:
+  - "Maintain existing TypeScript coding style and type definitions."
+  - "Ensure Jest tests pass completely (Exit Code 0) before pushing commits."
